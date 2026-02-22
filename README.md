@@ -16,7 +16,7 @@ Clone frontend dari aplikasi [Preloved](https://preloved.co.id) — platform e-c
 
 |                                                       |                      Dark Mode                       |                                                |
 | :---------------------------------------------------: | :--------------------------------------------------: | :--------------------------------------------: |
-| ![Explore](./assets/images/mockup/dark/keranjang.png) | ![Filter](./assets/images/mockup/dark/profile-1.png) | ![Dark](./assets/images/mockup/dark/inbox.png) |
+| ![Explore](./assets/images/mockup/dark/keranjang.png) | ![Filter](./assets/images/mockup/dark/profile-1.png) | ![Dark](./assets/images/mockup/dark/jual.png) |
 
 </div>
 
