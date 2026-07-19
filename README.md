@@ -1,8 +1,8 @@
 # 🏷️ Preloved Clone App
 
-Clone frontend dari aplikasi [Preloved](https://preloved.co.id) — platform e-commerce jual beli barang fashion bekas terpercaya di Indonesia.
+A frontend clone of the [Preloved](https://preloved.co.id) app — a trusted Indonesian marketplace for buying and selling secondhand fashion items.
 
-> **Catatan:** Ini adalah **learning project**. Hanya sisi frontend (UI/UX) yang diclone. Tidak ada backend, autentikasi, atau transaksi nyata. Data produk menggunakan [Platzi Fake Store API](https://api.escuelajs.co/api/v1).
+> **Note:** This is a **learning project**. Only the frontend (UI/UX) has been cloned. There is no backend, authentication, or real transactions involved. Product data comes from the [Platzi Fake Store API](https://api.escuelajs.co/api/v1).
 
 ---
 
@@ -12,7 +12,7 @@ Clone frontend dari aplikasi [Preloved](https://preloved.co.id) — platform e-c
 
 |                                                        |                           Light Mode                           |                                                      |
 | :----------------------------------------------------: | :------------------------------------------------------------: | :--------------------------------------------------: |
-| ![Beranda](./assets/images/mockup/ligth/beranda-1.png) | ![Produk](./assets/images/mockup/ligth/products-explore-1.png) | ![Detail](./assets/images/mockup/ligth/detail-1.png) |
+| ![Home](./assets/images/mockup/ligth/beranda-1.png) | ![Products](./assets/images/mockup/ligth/products-explore-1.png) | ![Detail](./assets/images/mockup/ligth/detail-1.png) |
 
 |                                                       |                      Dark Mode                       |                                                |
 | :---------------------------------------------------: | :--------------------------------------------------: | :--------------------------------------------: |
@@ -22,51 +22,51 @@ Clone frontend dari aplikasi [Preloved](https://preloved.co.id) — platform e-c
 
 ---
 
-## ✨ Fitur
+## ✨ Features
 
-- **Beranda** — Carousel produk (For You, Your Likes, Baru Dilihat), rekomendasi seller, dan hot items grid
-- **Infinite Scroll** — Load lebih banyak produk otomatis saat scroll ke bawah
-- **Filter Carousel** — Filter produk dengan animasi hide/show saat scroll
-- **Multi-Image Card** — Setiap produk bisa punya banyak gambar dengan swipe carousel
-- **Wishlist Button** — Animasi Lottie (lazy mount untuk performa optimal)
-- **Pull-to-Refresh** — Refresh semua data sekaligus
-- **Dark / Light Mode** — Support tema otomatis via NativeWind
-- **Image Fallback** — Handling gambar rusak dari Platzi API secara otomatis
+- **Home** — Product carousels (For You, Your Likes, Recently Viewed), seller recommendations, and a hot-items grid
+- **Infinite Scroll** — Automatically loads more products as the user scrolls down
+- **Filter Carousel** — Product filters with hide/show animation on scroll
+- **Multi-Image Card** — Each product supports multiple images with a swipeable carousel
+- **Wishlist Button** — Lottie animation (lazy-mounted for optimal performance)
+- **Pull-to-Refresh** — Refreshes all data at once
+- **Dark / Light Mode** — Automatic theme support via NativeWind
+- **Image Fallback** — Automatically handles broken images from the Platzi API
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Kategori     | Library                      |
-| ------------ | ---------------------------- |
-| Framework    | React Native + Expo SDK 52   |
-| Routing      | Expo Router v4               |
-| Server State | TanStack Query v5            |
-| Animasi      | React Native Reanimated v3   |
-| Styling      | NativeWind v4 (Tailwind CSS) |
-| Image        | expo-image                   |
-| Lottie       | lottie-react-native          |
-| Language     | TypeScript                   |
-| Data Source  | Platzi Fake Store API        |
+| Category      | Library                       |
+| ------------- | ------------------------------ |
+| Framework     | React Native + Expo SDK 52     |
+| Routing       | Expo Router v4                 |
+| Server State  | TanStack Query v5               |
+| Animation     | React Native Reanimated v3     |
+| Styling       | NativeWind v4 (Tailwind CSS)    |
+| Image         | expo-image                     |
+| Lottie        | lottie-react-native             |
+| Language      | TypeScript                      |
+| Data Source   | Platzi Fake Store API          |
 
 ---
 
-## 📁 Struktur Proyek
+## 📁 Project Structure
 
 ```
 preloved-clone/
 ├── app/
 │   ├── (tabs)/
-│   │   ├── index.tsx          # Halaman beranda
-│   │   ├── explore.tsx        # Halaman explore
-│   │   └── products.tsx       # Halaman produk + filter
+│   │   ├── index.tsx          # Home screen
+│   │   ├── explore.tsx        # Explore screen
+│   │   └── products.tsx       # Products screen + filters
 │   ├── product/[id]/
-│   │   └── index.tsx          # Detail produk
-│   └── _layout.tsx            # Root layout + provider
+│   │   └── index.tsx          # Product detail
+│   └── _layout.tsx            # Root layout + providers
 │
 ├── components/
 │   ├── ui/core/block/
-│   │   ├── beranda-block.tsx  # Block utama beranda
+│   │   ├── beranda-block.tsx  # Main home block
 │   │   └── explore-products.tsx
 │   └── ui/fragments/
 │       ├── custom/card/product-card.tsx
@@ -74,9 +74,9 @@ preloved-clone/
 │       └── shadcn-ui/image.tsx
 │
 ├── lib/server/products/
-│   ├── products-server.ts         # Fetch ke Platzi API
+│   ├── products-server.ts         # Fetch calls to the Platzi API
 │   ├── products-queris-server.ts  # TanStack Query options
-│   └── product-mappers.ts         # Transformasi data
+│   └── product-mappers.ts         # Data transformation
 │
 └── type/
     └── products-type.ts           # TypeScript types
@@ -84,29 +84,29 @@ preloved-clone/
 
 ---
 
-## 🚀 Cara Menjalankan
+## 🚀 Getting Started
 
-### Prasyarat
+### Prerequisites
 
 - Node.js 18+
 - Expo CLI: `npm install -g expo-cli`
-- iOS Simulator / Android Emulator **atau** Expo Go di HP
+- iOS Simulator / Android Emulator **or** Expo Go on a physical device
 
-### Instalasi
+### Installation
 
 ```bash
-# Clone repo
+# Clone the repo
 git clone https://github.com/username/preloved-clone.git
 cd preloved-clone
 
-# Install dependensi
+# Install dependencies
 npm install
 
-# Jalankan
+# Run
 npx expo start
 ```
 
-### Jalankan di device/simulator
+### Run on a device/simulator
 
 ```bash
 # iOS
@@ -120,34 +120,34 @@ npx expo run:android
 
 ## 🔌 API
 
-Proyek ini menggunakan [Platzi Fake Store API](https://api.escuelajs.co/api/v1) sebagai sumber data dummy.
+This project uses the [Platzi Fake Store API](https://api.escuelajs.co/api/v1) as its dummy data source.
 
-| Endpoint                       | Keterangan                                       |
-| ------------------------------ | ------------------------------------------------ |
-| `GET /products`                | Ambil daftar produk (dengan filter & pagination) |
-| `GET /products/:id`            | Detail satu produk                               |
-| `GET /categories`              | Daftar kategori                                  |
-| `GET /categories/:id/products` | Produk per kategori                              |
+| Endpoint                       | Description                                       |
+| ------------------------------- | -------------------------------------------------- |
+| `GET /products`                | Fetch product list (with filtering & pagination)   |
+| `GET /products/:id`            | Get a single product's detail                       |
+| `GET /categories`              | List categories                                     |
+| `GET /categories/:id/products` | Products within a category                          |
 
 ---
 
-## ⚙️ Konfigurasi TanStack Query
+## ⚙️ TanStack Query Configuration
 
-Provider sudah dikonfigurasi di `app/_layout.tsx` dengan:
+The provider is configured in `app/_layout.tsx` with:
 
 ```ts
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      staleTime: 60 * 1000, // Data fresh selama 1 menit
-      gcTime: 5 * 60 * 1000, // Cache disimpan 5 menit
-      retry: 1, // Retry sekali jika gagal
+      staleTime: 60 * 1000, // Data stays fresh for 1 minute
+      gcTime: 5 * 60 * 1000, // Cache retained for 5 minutes
+      retry: 1, // Retry once on failure
     },
   },
 });
 ```
 
-**AppState integration** menggunakan `focusManager` (bukan `refetchQueries`) untuk mencegah cancel infinite scroll saat app kembali ke foreground:
+**AppState integration** uses `focusManager` (instead of `refetchQueries`) to prevent infinite scroll from being cancelled when the app returns to the foreground:
 
 ```ts
 AppState.addEventListener('change', (status) => {
@@ -157,23 +157,23 @@ AppState.addEventListener('change', (status) => {
 
 ---
 
-## 🐛 Bug Fixes & Optimasi
+## 🐛 Bug Fixes & Optimizations
 
-Beberapa masalah teknis yang ditemukan dan diperbaiki selama pengerjaan:
+Technical issues found and resolved during development:
 
-| Masalah                                   | Fix                                                       |
-| ----------------------------------------- | --------------------------------------------------------- |
-| Header tertutup carousel saat scroll      | Header manual sebagai absolute View (bukan Stack.Screen)  |
-| Infinite scroll delay / harus scroll lagi | `onMomentumScrollEnd` + `onScrollEndDrag` handlers        |
-| ListFooter spinner stuck / tidak update   | `useRef` pattern + empty deps `useCallback` + `extraData` |
-| Cache collision beranda vs explore        | `MAX_ITEMS` dimasukkan ke query key                       |
-| App lag berat dengan banyak produk        | `React.memo` pada ProductCard + lazy mount LottieView     |
-| `removeClippedSubviews` Android bug       | Hanya aktif di iOS                                        |
-| `queryClient.refetchQueries()` deadlock   | Ganti ke `focusManager.setFocused()`                      |
+| Issue                                       | Fix                                                        |
+| -------------------------------------------- | ----------------------------------------------------------- |
+| Header hidden behind carousel while scrolling | Header rendered as an absolute `View` (instead of `Stack.Screen`) |
+| Infinite scroll delay / required an extra scroll to trigger | `onMomentumScrollEnd` + `onScrollEndDrag` handlers          |
+| List footer spinner stuck / not updating     | `useRef` pattern + empty-deps `useCallback` + `extraData`   |
+| Cache collision between Home and Explore     | `MAX_ITEMS` included in the query key                        |
+| Heavy app lag with many products             | `React.memo` on `ProductCard` + lazy-mounted `LottieView`   |
+| `removeClippedSubviews` Android bug          | Enabled on iOS only                                          |
+| `queryClient.refetchQueries()` deadlock      | Replaced with `focusManager.setFocused()`                   |
 
 ---
 
-## 📖 Referensi
+## 📖 References
 
 - [Preloved App — App Store](https://apps.apple.com/id/app/preloved-buy-sell-fashion/id6502086431)
 - [preloved.co.id](https://preloved.co.id)
@@ -184,13 +184,23 @@ Beberapa masalah teknis yang ditemukan dan diperbaiki selama pengerjaan:
 
 ---
 
-## 📄 Lisensi
+## 📄 License
 
-Proyek ini dibuat untuk tujuan belajar (educational purposes). Semua aset visual dan konsep UI mengacu pada aplikasi Preloved yang merupakan milik tim Preloved Indonesia.
+This project was built for educational purposes. All visual assets and UI concepts reference the Preloved app, which belongs to the Preloved Indonesia team.
 
 ---
 
 <div align="center">
-  <p>Made with ❤️ sebagai learning project</p>
+  <p>Made with ❤️ as a learning project</p>
   <p>Data by <a href="https://api.escuelajs.co/api/v1">Platzi Fake Store API</a></p>
 </div>
+
+---
+
+## 📝 Translator's notes
+
+A few small things worth polishing beyond the translation:
+
+- The "Struktur Proyek" tree mixes `beranda-block.tsx` (Indonesian for "home") with otherwise English file names — consider renaming to `home-block.tsx` for consistency now that the docs are in English.
+- The bug-fix table is genuinely useful — you could turn it into a running "Lessons Learned" doc that grows with future PRs, since it's the most technically interesting section here.
+- A short "Known Limitations" section (e.g. no persisted cart, no real checkout) would set expectations clearly for anyone browsing the repo.
